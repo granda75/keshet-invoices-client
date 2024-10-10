@@ -1,0 +1,56 @@
+
+.header {
+  margin-left: 10vw;
+  margin-bottom: 2vh;
+}
+
+.invoiceNameLabel {
+  margin-right: 2vw;
+}
+
+.dateLabel {
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+table.mat-table {
+    background-color: #f5f5f5;  
+  }
+  
+  .mat-mdc-header-row {
+    background-color: #3f51b5;  
+    color: white;
+    height: 5vh;
+  }
+  
+
+.mat-mdc-row {
+    height: 3vh;
+    
+    border-bottom: 1px solid lightgray;
+    height : 5vh;
+}
+
+.mat-mdc-cell {
+    border-bottom: 1px solid lightgray; /* Ensure cell borders match row borders */
+}
+  
+  
+.mat-row:hover {
+    background-color: #e0e0e0;  /* Row hover effect */
+  }
+  
+  /* Customize alternate row colors */
+  .mat-row:nth-of-type(even) {
+    background-color: #f9f9f9;  /* Light alternate row background color */
+  }
+  
+  /* Customize cell text color */
+  .mat-cell {
+    color: #000000;  /* Text color for table cells */
+  }
+  
+  app-invoice-preview {
+    margin-top: 5vh;
+  }
+  

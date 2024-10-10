@@ -1,0 +1,14 @@
+<div>
+    <button mat-raised-button color="secondary" (click)="toggleView()">Switch</button>
+</div>
+<div *ngIf="invoiceTableFirst">
+    <app-invoice-search (pdfUrlSelected)="onPdfUrlSelected($event)"> </app-invoice-search>
+    <app-invoice-preview *ngIf="pdfUrl" [pdfUrl]="pdfUrl"></app-invoice-preview>
+</div>
+
+<div *ngIf="!invoiceTableFirst">
+    <app-invoice-preview *ngIf="pdfUrl" [pdfUrl]="pdfUrl"></app-invoice-preview>
+    <app-invoice-search (pdfUrlSelected)="onPdfUrlSelected($event)"> </app-invoice-search>
+    
+</div>
+
