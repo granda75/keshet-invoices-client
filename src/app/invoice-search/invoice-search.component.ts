@@ -5,7 +5,10 @@ import { MatSort } from '@angular/material/sort';
 import { MatPaginator} from '@angular/material/paginator'
 import { MatTableDataSource } from '@angular/material/table';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
+
+@UntilDestroy()
 @Component({
   selector: 'app-invoice-search',
   templateUrl: './invoice-search.component.html',
@@ -57,15 +60,19 @@ export class InvoiceSearchComponent implements OnInit {
     const queryText = this.invoiceSearchForm.get('queryText')?.value;
     const date = this.invoiceSearchForm.get('selectedDate')?.value;
 
-    this.invoiceService.searchInvoices(date, queryText).subscribe(data => {
-      this.dataSource.data = data;
-    })
+    this.invoiceService.searchInvoices(date, queryText)
+        .pipe(untilDestroyed(this))
+        .subscribe(data => {
+            this.dataSource.data = data;
+      })
   }
   
   getInvoices(): void {
-    this.invoiceService.getInvoices().subscribe(data => {
-      this.dataSource.data = data;
-    });
+    this.invoiceService.getInvoices()
+      .pipe(untilDestroyed(this))
+      .subscribe(data => {
+        this.dataSource.data = data;
+      });
   }
 
   

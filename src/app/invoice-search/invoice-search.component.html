@@ -40,6 +40,9 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"
           (click)="onRowSelected(row)"></tr>
     </table>
+    <!-- <div class="paging">
+      <mat-paginator [length]="dataSource.data.length" [pageSizeOptions]="[5, 10, 15]"> </mat-paginator>
+  </div> -->
   </div>
   
   
