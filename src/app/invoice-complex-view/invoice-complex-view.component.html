@@ -1,14 +1,36 @@
 <div>
-    <button mat-raised-button color="secondary" (click)="toggleView()">Switch</button>
-</div>
-<div *ngIf="invoiceTableFirst">
-    <app-invoice-search (pdfUrlSelected)="onPdfUrlSelected($event)"> </app-invoice-search>
-    <app-invoice-preview *ngIf="pdfUrl" [pdfUrl]="pdfUrl"></app-invoice-preview>
-</div>
-
-<div *ngIf="!invoiceTableFirst">
-    <app-invoice-preview *ngIf="pdfUrl" [pdfUrl]="pdfUrl"></app-invoice-preview>
-    <app-invoice-search (pdfUrlSelected)="onPdfUrlSelected($event)"> </app-invoice-search>
+    
+    <div class="header">
+        <img src="assets/person.jpg" class="personLogo"/>
+        <img src="assets/keshet-logo.jpg" class="keshetLogo"/>
+        
+        <button  color="secondary" (click)="toggleView()" class="vertical-button">
+            <img src="assets/switch.jpg" alt="Switch Icon" />
+        </button>
+    
+        <app-invoice-search> </app-invoice-search>
+    
+        <app-invoices-statuses> </app-invoices-statuses>
+       
+        
+    </div>
+    <div class="second-line-header"> </div>
+    
     
 </div>
+ 
+
+
+<div class="invoice-container">    
+    <div class="invoice-preview-container" *ngIf="pdfUrl && invoicePreviewVisible">
+    <app-invoice-preview *ngIf="pdfUrl && invoicePreviewVisible" [pdfUrl]="pdfUrl"></app-invoice-preview>
+</div>
+
+<div class="invoice-table-container">
+    
+    <app-invoice-table (pdfUrlSelected)="onPdfUrlSelected($event)"></app-invoice-table>
+   
+</div>
+
+
 

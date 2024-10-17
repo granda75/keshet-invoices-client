@@ -1,0 +1,29 @@
+
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" dir="rtl">
+      
+    <ng-container matColumnDef="invoiceName">
+      <th mat-header-cell *matHeaderCellDef> תיאור תעודה </th>
+      <td mat-cell *matCellDef="let invoice"> {{invoice.invoiceName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="supplierName">
+      <th mat-header-cell *matHeaderCellDef> ספק </th>
+      <td mat-cell *matCellDef="let invoice"> {{invoice.supplierName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="totalAmount">
+      <th mat-header-cell *matHeaderCellDef> עלות </th>
+      <td mat-cell *matCellDef="let invoice">{{invoice.totalAmount}} ש"ח  </td>
+    </ng-container>
+  
+    <!-- <ng-container matColumnDef="invoiceDate">
+      <th mat-header-cell *matHeaderCellDef> Invoice Date </th>
+      <td mat-cell *matCellDef="let invoice"> {{invoice.invoiceDate | date}} </td>
+    </ng-container> -->
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+        (click)="onRowSelected(row)"></tr>
+  </table>

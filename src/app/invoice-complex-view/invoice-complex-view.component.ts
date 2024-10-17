@@ -6,13 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./invoice-complex-view.component.scss']
 })
 export class InvoiceComplexViewComponent {
-  invoiceTableFirst: boolean = true;
+  
+  invoicePreviewVisible: boolean = false;
 
   pdfUrl!: string;
 
   toggleView(): void {
-    this.pdfUrl = "";
-    this.invoiceTableFirst = !this.invoiceTableFirst;
+    //this.pdfUrl = "";
+    this.invoicePreviewVisible = !this.invoicePreviewVisible;
+    
   }
 
   onPdfUrlSelected(pdfUrl: string): void {

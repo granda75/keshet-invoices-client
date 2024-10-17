@@ -1,9 +1,13 @@
 
-.header {
-  margin-left: 10vw;
-  margin-bottom: 2vh;
+.searchButton {
+  padding-top: 1vh;
+ // margin-top: 2vh;
 }
 
+.searchPanel {
+  margin-left: 5vw;
+  margin-bottom: 2vh;
+}
 .invoiceNameLabel {
   margin-right: 2vw;
 }
@@ -13,44 +17,39 @@
   margin-right: 2vw;
 }
 
-table.mat-table {
-    background-color: #f5f5f5;  
-  }
-  
-  .mat-mdc-header-row {
-    background-color: #3f51b5;  
-    color: white;
-    height: 5vh;
-  }
-  
-
-.mat-mdc-row {
-    height: 3vh;
-    
-    border-bottom: 1px solid lightgray;
-    height : 5vh;
+.searchField {
+  margin-right: 1vw;
+  border-radius: 5px;
+  height: 5vh;
+  //border-color: lightgray;
 }
 
-.mat-mdc-cell {
-    border-bottom: 1px solid lightgray; /* Ensure cell borders match row borders */
+
+
+.selectedDate {
+  height: 4vh;
+  border-radius: 5px;
 }
+
+// .date-picker-field .selectedDate {
+//   // padding-top: 10px;
+//   // padding-right: 50px; /* Make space for the date picker icon inside the input */
+// }
+// .date-picker-field {
+//   height: 4vh;
+// }
+
+
+
+mat-form-field {
+  padding: 0px!important;
+  height: 4vh;
+}
+
+.mat-datepicker-toggle {
+  margin-left: -42px; /* Adjust this value if needed to ensure proper placement */
+}
+
   
   
-.mat-row:hover {
-    background-color: #e0e0e0;  /* Row hover effect */
-  }
-  
-  /* Customize alternate row colors */
-  .mat-row:nth-of-type(even) {
-    background-color: #f9f9f9;  /* Light alternate row background color */
-  }
-  
-  /* Customize cell text color */
-  .mat-cell {
-    color: #000000;  /* Text color for table cells */
-  }
-  
-  app-invoice-preview {
-    margin-top: 5vh;
-  }
   

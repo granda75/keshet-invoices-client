@@ -1,50 +1,21 @@
 
-<!-- <div *ngIf="isListView; else pdfView"> -->
 <div>  
-    <!-- <button mat-button color="primary" (click)="toggleView(null)">Switch</button> -->
-    <div class="header" [formGroup]="invoiceSearchForm">
-      <label class="invoiceNameLabel">Invoice Name or Supplier Name</label> 
-      <input class="searchField"  formControlName="queryText"  type="search" id="search-input">
+  <div class="searchPanel" [formGroup]="invoiceSearchForm">
+    <button class="searchButton" mat-icon-button color="primary" (click)="onSearch()" >
+      <img src="assets/filter.jpg" alt="Filter Icon" />
+    </button>
     
-      <label class="dateLabel">Select a date</label>
-      <input matInput [matDatepicker]="picker" formControlName="selectedDate">
+    <input class="searchField"  formControlName="queryText" dir="rtl"  type="search" id="search-input" placeholder="חפש">
+    
+    <mat-form-field appearance="outline" class="date-picker-field">
+      <input matInput [matDatepicker]="picker" formControlName="selectedDate" class="selectedDate">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>  
+  
+</div>
 
-      <button mat-raised-button color="primary" (click)="onSearch()">Search</button>        
-    </div>  
-    
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-      
-      <ng-container matColumnDef="invoiceNumber">
-        <th mat-header-cell *matHeaderCellDef> Invoice Number </th>
-        <td mat-cell *matCellDef="let invoice"> {{invoice.invoiceNumber}} </td>
-      </ng-container>
-  
-      <ng-container matColumnDef="invoiceName">
-        <th mat-header-cell *matHeaderCellDef> Invoice Name </th>
-        <td mat-cell *matCellDef="let invoice"> {{invoice.invoiceName}} </td>
-      </ng-container>
-  
-      <ng-container matColumnDef="supplierName">
-        <th mat-header-cell *matHeaderCellDef> Supplier Name </th>
-        <td mat-cell *matCellDef="let invoice"> {{invoice.supplierName}} </td>
-      </ng-container>
-  
-      <ng-container matColumnDef="invoiceDate">
-        <th mat-header-cell *matHeaderCellDef> Invoice Date </th>
-        <td mat-cell *matCellDef="let invoice"> {{invoice.invoiceDate | date}} </td>
-      </ng-container>
-  
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"
-          (click)="onRowSelected(row)"></tr>
-    </table>
-    <!-- <div class="paging">
-      <mat-paginator [length]="dataSource.data.length" [pageSizeOptions]="[5, 10, 15]"> </mat-paginator>
-  </div> -->
-  </div>
-  
-  
-  
-  
+
+
+

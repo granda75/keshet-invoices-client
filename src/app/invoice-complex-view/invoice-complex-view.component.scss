@@ -1,0 +1,109 @@
+.header {
+    height: 15vh;
+    background-color: #4A73FF;
+    position:relative;
+   
+}
+
+.second-line-header {
+    background-color: rgb(229, 224, 224);
+    height: 12vh;
+
+}
+
+.keshetLogo {
+    float:right;
+
+}
+
+.personLogo {
+    float:left;
+
+}
+
+.vertical-button {
+    position: absolute; 
+    top: calc(65%); 
+    padding: 0;
+    margin: 0;
+    left:0;
+    margin-left: 1vw;
+}
+
+app-invoice-search {
+    position: absolute; 
+    top: calc(62%);  
+    left: 25; 
+    background-color: white;
+    display: inline;
+    width: 45vw;
+    margin-left: 1vw;
+    height: 15vh;
+}
+
+app-invoices-statuses {
+    position: absolute; 
+    top: calc(62%);  
+    left: 50vw; 
+    width: 40vw;
+    background-color: white;
+    display: inline;
+    margin-left: 8vw;
+    height: 15vh;
+}
+
+
+
+
+.container {
+    position: absolute; /* Set button position as absolute */
+    top: calc(65%); /* 10px below the personLogo */
+    display: flex; 
+    justify-content: space-between;  
+    align-items: stretch; 
+    height: 16vh; 
+    padding-bottom: -1vh;
+    //background-color: lightgray;
+  }
+
+  .left, .right {
+    display: inline;
+  }
+  
+//   .left, .right {
+//     flex: 1; 
+//     //background-color: white;
+//   }
+  
+//   .right {
+//     display: flex;
+//     justify-content: flex-end; /* Ensure the content of the right side stays aligned right */
+    
+//     margin-left: 10w;
+//     //margin-bottom: -10vh;
+
+//   }
+  
+  app-invoice-search, app-invoices-statuses {
+    // width: 100%; /* Ensure both components take the full width of their container */
+    // height: 100%; /* Ensure both components take the full height */
+  }
+  
+
+.invoice-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Align items at the top */
+  }
+  
+  .invoice-preview-container {
+    flex: 1; /* Adjust the width to suit your needs */
+    margin-right: 20px; /* Add spacing between the preview and the table */
+  }
+  
+  .invoice-table-container {
+    flex: 2; /* The table takes more space */
+  }
+
+  
+  

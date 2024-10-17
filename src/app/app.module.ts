@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { InvoiceComplexViewComponent } from './invoice-complex-view/invoice-complex-view.component';  
 import { AppConfigService } from './app-config.service';
+import { InvoiceTableComponent } from './invoice-table/invoice-table.component';
+import { InvoicesStatusesComponent } from './invoices-statuses/invoices-statuses.component';
  
 
 export function initializeApp(appConfig: AppConfigService) {
@@ -24,8 +26,10 @@ export function initializeApp(appConfig: AppConfigService) {
     AppComponent,
     InvoiceSearchComponent,
     InvoicePreviewComponent,
+    InvoicesStatusesComponent,
     SafePipe,
-    InvoiceComplexViewComponent
+    InvoiceComplexViewComponent,
+    InvoiceTableComponent
   ],
   imports: [
     BrowserModule,
