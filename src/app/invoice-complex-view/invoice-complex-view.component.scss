@@ -8,17 +8,14 @@
 .second-line-header {
     background-color: rgb(229, 224, 224);
     height: 12vh;
-
 }
 
 .keshetLogo {
     float:right;
-
 }
 
 .personLogo {
     float:left;
-
 }
 
 .vertical-button {
@@ -36,7 +33,7 @@ app-invoice-search {
     left: 25; 
     background-color: white;
     display: inline;
-    width: 45vw;
+    width: 43vw;
     margin-left: 1vw;
     height: 15vh;
 }
@@ -52,9 +49,6 @@ app-invoices-statuses {
     height: 15vh;
 }
 
-
-
-
 .container {
     position: absolute; /* Set button position as absolute */
     top: calc(65%); /* 10px below the personLogo */
@@ -63,31 +57,14 @@ app-invoices-statuses {
     align-items: stretch; 
     height: 16vh; 
     padding-bottom: -1vh;
-    //background-color: lightgray;
+    
   }
 
   .left, .right {
     display: inline;
   }
   
-//   .left, .right {
-//     flex: 1; 
-//     //background-color: white;
-//   }
-  
-//   .right {
-//     display: flex;
-//     justify-content: flex-end; /* Ensure the content of the right side stays aligned right */
-    
-//     margin-left: 10w;
-//     //margin-bottom: -10vh;
-
-//   }
-  
-  app-invoice-search, app-invoices-statuses {
-    // width: 100%; /* Ensure both components take the full width of their container */
-    // height: 100%; /* Ensure both components take the full height */
-  }
+ 
   
 
 .invoice-container {
@@ -97,12 +74,12 @@ app-invoices-statuses {
   }
   
   .invoice-preview-container {
-    flex: 1; /* Adjust the width to suit your needs */
-    margin-right: 20px; /* Add spacing between the preview and the table */
+    flex: 1; 
+    margin-right: 20px; 
   }
   
   .invoice-table-container {
-    flex: 2; /* The table takes more space */
+    flex: 2; 
   }
 
   

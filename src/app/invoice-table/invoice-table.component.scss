@@ -1,3 +1,14 @@
+.selected {
+  background-color: #4A73FF !important;  
+  color: white !important;  
+}
+
+td img {
+  width: 30px;  /* Example size */
+  height: 30px;
+}
+
+
 table.mat-table {
     background-color: #f5f5f5;  
   }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InvoiceSearchField } from '../model/invoice-search-field';
 
 @Component({
   selector: 'app-invoice-complex-view',
@@ -10,6 +11,8 @@ export class InvoiceComplexViewComponent {
   invoicePreviewVisible: boolean = false;
 
   pdfUrl!: string;
+  searchText!: string;
+  selectedDate!: Date;
 
   toggleView(): void {
     //this.pdfUrl = "";
@@ -19,5 +22,10 @@ export class InvoiceComplexViewComponent {
 
   onPdfUrlSelected(pdfUrl: string): void {
     this.pdfUrl = pdfUrl;  
+  }
+
+  onSearchFieldsSelected(invoiceSearchField: InvoiceSearchField){
+    this.searchText = invoiceSearchField.searchText;
+    this.selectedDate = invoiceSearchField.searchDate;
   }
 }

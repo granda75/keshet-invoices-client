@@ -7,11 +7,18 @@
     
     <input class="searchField"  formControlName="queryText" dir="rtl"  type="search" id="search-input" placeholder="חפש">
     
-    <mat-form-field appearance="outline" class="date-picker-field">
+    <!-- <mat-form-field appearance="outline" class="date-picker-field"> -->
+      <!-- <input matInput [matDatepicker]="picker" formControlName="selectedDate" class="selectedDate">
+      <mat-datepicker-toggle  [for]="picker" class="dateToggle"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker> -->
+    <!-- </mat-form-field> -->
+
+    <!-- <div class="date-picker-wrapper"> -->
       <input matInput [matDatepicker]="picker" formControlName="selectedDate" class="selectedDate">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker-toggle matSuffix [for]="picker" class="dateToggle"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
+    <!-- </div> -->
+    
   </div>  
   
 </div>

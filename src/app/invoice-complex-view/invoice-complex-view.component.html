@@ -8,7 +8,7 @@
             <img src="assets/switch.jpg" alt="Switch Icon" />
         </button>
     
-        <app-invoice-search> </app-invoice-search>
+        <app-invoice-search (searchFieldsSelected) = "onSearchFieldsSelected($event)"> </app-invoice-search>
     
         <app-invoices-statuses> </app-invoices-statuses>
        
@@ -16,9 +16,7 @@
     </div>
     <div class="second-line-header"> </div>
     
-    
 </div>
- 
 
 
 <div class="invoice-container">    
@@ -27,9 +25,11 @@
 </div>
 
 <div class="invoice-table-container">
-    
-    <app-invoice-table (pdfUrlSelected)="onPdfUrlSelected($event)"></app-invoice-table>
-   
+    <app-invoice-table  
+        [searchText]="searchText"
+        [searchDate]="selectedDate"
+        (pdfUrlSelected)="onPdfUrlSelected($event)">
+    </app-invoice-table>
 </div>
 
 

@@ -6,6 +6,7 @@ import { MatPaginator} from '@angular/material/paginator'
 import { MatTableDataSource } from '@angular/material/table';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { InvoiceSearchField } from '../model/invoice-search-field';
 
 
 @UntilDestroy()
@@ -17,6 +18,8 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 export class InvoiceSearchComponent implements OnInit {
 
   @Output() pdfUrlSelected: EventEmitter<string> = new EventEmitter<string>();
+  @Output() searchFieldsSelected: EventEmitter<InvoiceSearchField> = new EventEmitter<InvoiceSearchField>();
+    
 
   invoiceSearchForm!: FormGroup;
   searchText: string = "";
@@ -56,15 +59,16 @@ export class InvoiceSearchComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
-  onSearch(): void{
+  onSearch(): void {
     const queryText = this.invoiceSearchForm.get('queryText')?.value;
     const date = this.invoiceSearchForm.get('selectedDate')?.value;
 
-    this.invoiceService.searchInvoices(date, queryText)
-        .pipe(untilDestroyed(this))
-        .subscribe(data => {
-            this.dataSource.data = data;
-      })
+    var invoiceSearchField = new InvoiceSearchField();
+    invoiceSearchField.searchText = queryText;
+    invoiceSearchField.searchDate = date;
+   
+    this.searchFieldsSelected.emit(invoiceSearchField);
+   
   }
   
   getInvoices(): void {

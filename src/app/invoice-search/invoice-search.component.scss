@@ -1,11 +1,19 @@
 
-.searchButton {
-  padding-top: 1vh;
- // margin-top: 2vh;
+
+.dateToggle {
+  position: absolute;
+  top: 5%;
+  
 }
 
+.searchButton {
+  padding-top: 1vh;
+ 
+}
+
+
 .searchPanel {
-  margin-left: 5vw;
+
   margin-bottom: 2vh;
 }
 .invoiceNameLabel {
@@ -21,24 +29,14 @@
   margin-right: 1vw;
   border-radius: 5px;
   height: 5vh;
-  //border-color: lightgray;
+ 
 }
-
 
 
 .selectedDate {
   height: 4vh;
   border-radius: 5px;
 }
-
-// .date-picker-field .selectedDate {
-//   // padding-top: 10px;
-//   // padding-right: 50px; /* Make space for the date picker icon inside the input */
-// }
-// .date-picker-field {
-//   height: 4vh;
-// }
-
 
 
 mat-form-field {
