@@ -1,11 +1,7 @@
-
-
-
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" dir="rtl">
       
   <ng-container matColumnDef="invoiceStatus">
     <th mat-header-cell *matHeaderCellDef>  </th>
-    <!-- <td mat-cell *matCellDef="let invoice"> {{invoice.invoiceStatus}} </td> -->
     <td mat-cell *matCellDef="let invoice">
       <img *ngIf="invoice.invoiceStatus === 1" src="assets/waiting.jpg" alt="Waiting" />
       <img *ngIf="invoice.invoiceStatus === 2" src="assets/in_process.jpg" alt="In Process" />
@@ -28,11 +24,6 @@
       <td mat-cell *matCellDef="let invoice">{{invoice.totalAmount}} ש"ח  </td>
     </ng-container>
   
-    <!-- <ng-container matColumnDef="invoiceDate">
-      <th mat-header-cell *matHeaderCellDef> Invoice Date </th>
-      <td mat-cell *matCellDef="let invoice"> {{invoice.invoiceDate | date}} </td>
-    </ng-container> -->
-
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"
         [class.selected]="selectedRow === row"

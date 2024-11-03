@@ -15,6 +15,7 @@ import { InvoiceComplexViewComponent } from './invoice-complex-view/invoice-comp
 import { AppConfigService } from './app-config.service';
 import { InvoiceTableComponent } from './invoice-table/invoice-table.component';
 import { InvoicesStatusesComponent } from './invoices-statuses/invoices-statuses.component';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
  
 
 export function initializeApp(appConfig: AppConfigService) {
@@ -47,7 +48,8 @@ export function initializeApp(appConfig: AppConfigService) {
                 useFactory: initializeApp,
                 deps: [AppConfigService],
                 multi: true,
-              }
+              },
+              { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
   ],
   bootstrap: [AppComponent]
 })

@@ -2,7 +2,11 @@
     height: 15vh;
     background-color: #4A73FF;
     position:relative;
-   
+}
+
+.switch {
+  height: 100%;
+  object-fit: cover;
 }
 
 .second-line-header {
@@ -20,57 +24,54 @@
 
 .vertical-button {
     position: absolute; 
-    top: calc(65%); 
+    top: 62%; 
     padding: 0;
     margin: 0;
     left:0;
     margin-left: 1vw;
+    height: 12vh;
 }
 
 app-invoice-search {
     position: absolute; 
-    top: calc(62%);  
-    left: 25; 
+    top: 62%;  
+    left: 4vw;
     background-color: white;
     display: inline;
     width: 43vw;
     margin-left: 1vw;
-    height: 15vh;
+    height: 12vh;
 }
 
 app-invoices-statuses {
     position: absolute; 
-    top: calc(62%);  
-    left: 50vw; 
-    width: 40vw;
+    top: 62%;  
+    left: 55vw; 
+    width: 35vw;
     background-color: white;
     display: inline;
     margin-left: 8vw;
-    height: 15vh;
+    height: 12vh;
 }
 
 .container {
-    position: absolute; /* Set button position as absolute */
-    top: calc(65%); /* 10px below the personLogo */
+    position: absolute; 
+    top: 65%; 
     display: flex; 
     justify-content: space-between;  
     align-items: stretch; 
     height: 16vh; 
     padding-bottom: -1vh;
-    
   }
 
   .left, .right {
     display: inline;
   }
-  
- 
-  
 
 .invoice-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* Align items at the top */
+    align-items: flex-start; 
   }
   
   .invoice-preview-container {

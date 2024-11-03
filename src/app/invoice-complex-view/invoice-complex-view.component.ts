@@ -9,15 +9,12 @@ import { InvoiceSearchField } from '../model/invoice-search-field';
 export class InvoiceComplexViewComponent {
   
   invoicePreviewVisible: boolean = false;
-
   pdfUrl!: string;
   searchText!: string;
   selectedDate!: Date;
 
   toggleView(): void {
-    //this.pdfUrl = "";
     this.invoicePreviewVisible = !this.invoicePreviewVisible;
-    
   }
 
   onPdfUrlSelected(pdfUrl: string): void {

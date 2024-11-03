@@ -1,23 +1,19 @@
 <div>
-    
     <div class="header">
         <img src="assets/person.jpg" class="personLogo"/>
         <img src="assets/keshet-logo.jpg" class="keshetLogo"/>
         
         <button  color="secondary" (click)="toggleView()" class="vertical-button">
-            <img src="assets/switch.jpg" alt="Switch Icon" />
+            <img src="assets/switch.jpg" class="switch" alt="Switch Icon" />
         </button>
     
         <app-invoice-search (searchFieldsSelected) = "onSearchFieldsSelected($event)"> </app-invoice-search>
     
         <app-invoices-statuses> </app-invoices-statuses>
-       
-        
     </div>
-    <div class="second-line-header"> </div>
-    
-</div>
 
+    <div class="second-line-header"> </div>
+</div>
 
 <div class="invoice-container">    
     <div class="invoice-preview-container" *ngIf="pdfUrl && invoicePreviewVisible">

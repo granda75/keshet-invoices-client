@@ -4,22 +4,23 @@ import { InvoiceService } from '../invoice.service';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator} from '@angular/material/paginator'
 import { MatTableDataSource } from '@angular/material/table';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { InvoiceSearchField } from '../model/invoice-search-field';
+import { DatePipe } from '@angular/common';
 
 
 @UntilDestroy()
 @Component({
   selector: 'app-invoice-search',
   templateUrl: './invoice-search.component.html',
-  styleUrls: ['./invoice-search.component.scss']
+  styleUrls: ['./invoice-search.component.scss'],
+  providers: [DatePipe]  
 })
 export class InvoiceSearchComponent implements OnInit {
 
   @Output() pdfUrlSelected: EventEmitter<string> = new EventEmitter<string>();
   @Output() searchFieldsSelected: EventEmitter<InvoiceSearchField> = new EventEmitter<InvoiceSearchField>();
-    
 
   invoiceSearchForm!: FormGroup;
   searchText: string = "";
@@ -37,6 +38,7 @@ export class InvoiceSearchComponent implements OnInit {
 
 
   constructor(private invoiceService: InvoiceService,
+              private datePipe: DatePipe,
               private formBuilder: FormBuilder) {
 
   }
