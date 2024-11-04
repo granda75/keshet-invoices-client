@@ -54,16 +54,6 @@ app-invoices-statuses {
     height: 12vh;
 }
 
-.container {
-    position: absolute; 
-    top: 65%; 
-    display: flex; 
-    justify-content: space-between;  
-    align-items: stretch; 
-    height: 16vh; 
-    padding-bottom: -1vh;
-  }
-
   .left, .right {
     display: inline;
   }
@@ -76,7 +66,7 @@ app-invoices-statuses {
   
   .invoice-preview-container {
     flex: 1; 
-    margin-right: 20px; 
+    margin-right: 1vw; 
   }
   
   .invoice-table-container {

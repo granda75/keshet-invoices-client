@@ -4,44 +4,42 @@
 }
 
 td img {
-  width: 30px;  /* Example size */
-  height: 30px;
+  width: 1.5vw;  
+  height: 3.2vh;
 }
-
 
 table.mat-table {
     background-color: #f5f5f5;  
   }
   
-  .mat-mdc-header-row {
-    background-color: #3f51b5;  
-    color: white;
-    height: 5vh;
-  }
+.mat-mdc-header-row {
+  background-color: #3f51b5;  
+  color: white;
+  height: 5vh;
+}
   
 
 .mat-mdc-row {
     height: 3vh;
-    
     border-bottom: 1px solid lightgray;
     height : 5vh;
 }
 
 .mat-mdc-cell {
-    border-bottom: 1px solid lightgray; /* Ensure cell borders match row borders */
+    border-bottom: 1px solid lightgray; 
 }
   
   
 .mat-row:hover {
-    background-color: #e0e0e0;  /* Row hover effect */
-  }
+    background-color: #e0e0e0;  
+}
   
-  /* Customize alternate row colors */
-  .mat-row:nth-of-type(even) {
-    background-color: #f9f9f9;  /* Light alternate row background color */
-  }
   
-  /* Customize cell text color */
-  .mat-cell {
-    color: #000000;  /* Text color for table cells */
-  }
+.mat-row:nth-of-type(even) {
+  background-color: #f9f9f9;  
+}
+  
+  
+.mat-cell {
+  color: #000000;  
+}
